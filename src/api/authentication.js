@@ -34,7 +34,7 @@ async function appOnlyOauth() {
   return result;
 }
 
-export default async function authenticte() {
+export default async function authenticate() {
   const appOnly = await appOnlyOauth();
   console.log(appOnly);
 
