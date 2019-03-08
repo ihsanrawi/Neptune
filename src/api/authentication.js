@@ -36,7 +36,7 @@ async function appOnlyOauth() {
 
 export default async function authenticate() {
   const appOnly = await appOnlyOauth();
-  console.log(appOnly);
+  // console.log(appOnly);
 
   const _snoowrap = new Snoowrap({
     userAgent: credentials.userAgent,
