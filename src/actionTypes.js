@@ -1,0 +1,2 @@
+export const GET_SNOOWRAP = "GET_SNOOWRAP";
+export const RECEIVE_SNOOWRAP = "RECEIVE_SNOOWRAP";
