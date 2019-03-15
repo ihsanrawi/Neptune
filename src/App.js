@@ -1,34 +1,20 @@
-import React, { Component } from "react";
+import React from 'react';
+import { Route, Switch } from "react-router-dom";
 
-import authenticate from "./api/authentication";
-import Post from "./components/Post/";
+import Landing from './pages/Landing'
+import NotFoundPage from './pages/NotFoundPage'
 
-class App extends Component {
-  state = {
-    posts: [],
-  };
-
-  async componentDidMount() {
-    const _snoowrap = await authenticate();
-    await _snoowrap.getHot()
-      .then(posts => {
-        this.setState({posts});
-      })
-      .catch(error => {
-        console.log(error);
-      });
-  }
-
-  render() {
-    const { posts } = this.state;
-
-    return (
-        <div className="post-feed">
-          {posts.length !== 0 &&
-            posts.map(post => <Post key={post.id} post={post} />)}
-        </div>
-    );
-  }
+function App() {
+  return (
+    <div>
+      {/* <Header /> */}
+      <Switch>
+        <Route exact path = "/" component = { Landing } />
+        <Route component = { NotFoundPage } />
+      </Switch>
+    </div>
+  )
 }
+
 
 export default App;
