@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
 
@@ -12,9 +12,9 @@ import Root from './Root';
 
 ReactDOM.render(
   <Provider store={store}>
-    {/* <Router> */}
+    <Router>
       <Root />
-    {/* </Router> */}
+    </Router>
   </Provider>, 
   document.getElementById('root')
 );
