@@ -2,7 +2,7 @@ import authenticate from '../api/authentication';
 import {GET_SNOOWRAP, RECEIVE_SNOOWRAP} from '../actionTypes'
 
 /** Action creator */
-const getSnoowrap = () => {
+const requestSnoowrap = () => {
   return {
     type: GET_SNOOWRAP
   };
@@ -17,7 +17,7 @@ const receiveSnoowrap = (snoowrap) => {
 
 export const initSnoowrap = () => {
   return async dispatch => {
-    dispatch(getSnoowrap());
+    dispatch(requestSnoowrap());
     const snoowrap_ = await authenticate();
     dispatch(receiveSnoowrap(snoowrap_));
   }
