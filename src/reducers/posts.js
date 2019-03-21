@@ -1,4 +1,4 @@
-import {REQUEST_POSTS, RECEIVE_POSTS} from '../actionTypes';
+import {REQUEST_POSTS, REQUEST_MORE_POSTS, RECEIVE_POSTS} from '../actionTypes';
 
 const initialState = {
   loading: true,  
@@ -8,6 +8,12 @@ const initialState = {
 export default function posts(state = initialState, action) {
   switch(action.type) {
     case REQUEST_POSTS:
+      return {
+        ...state,
+        loading: true
+      }
+
+    case REQUEST_MORE_POSTS:
       return {
         ...state,
         loading: true

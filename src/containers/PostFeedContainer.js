@@ -2,17 +2,45 @@ import React, { Component } from 'react';
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 
-import {fetchPosts} from "../actions/posts";
+import {fetchPosts, fetchMorePosts} from "../actions/posts";
 
 import Loading from '../components/Loading'
 import Post from '../components/Post'
 
 class PostFeedContainer extends Component {
   componentDidMount = () => {
+    this.loadPosts();
+    window.addEventListener('scroll', this.onScroll, false);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.onScroll, false);
+  }
+
+  onScroll = () => {
+    if (
+      (window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 500) &&
+      this.props.posts.length
+    ) {
+      this.loadMorePosts();
+    }
+  }
+
+  loadPosts = () => {
     const { subreddit } = this.props;
     try {
       this.props.fetchPosts(subreddit);
-  } catch (error) {
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  loadMorePosts = () => {
+    const { subreddit } = this.props;
+    
+    try {
+      this.props.fetchMorePosts(subreddit);
+    } catch (error) {
       console.log(error);
     }
   }
@@ -25,7 +53,7 @@ class PostFeedContainer extends Component {
     }
 
     if(posts.length === 0) {
-      return <div>No post found. Go outside and play. :D</div>
+      return <div>No post found. :C</div>
     }
 
 
@@ -40,6 +68,7 @@ class PostFeedContainer extends Component {
 PostFeedContainer.propTypes = {
   loading: PropTypes.bool.isRequired,
   fetchPosts: PropTypes.func.isRequired,
+  fetchMorePosts: PropTypes.func.isRequired,
   subreddit: PropTypes.string,
   posts: PropTypes.array.isRequired,
 };
@@ -59,6 +88,9 @@ const mapDispatchToProps = (dispatch) => {
   return {
     fetchPosts: (subreddit) => {
       dispatch(fetchPosts(subreddit));
+    },
+    fetchMorePosts: (subreddit) => {
+      dispatch(fetchMorePosts(subreddit));
     }
   }
 };
