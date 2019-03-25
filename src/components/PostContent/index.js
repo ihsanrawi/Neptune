@@ -4,7 +4,6 @@ import { isImgUrl } from "../../utils";
 import './PostContent.scss';
 
 function PostContent({ post }) {
-  // TODO: cap text at three rows, make expandable
   if (post.is_self) {
     return (
       <div className="post-self-text">
@@ -12,6 +11,25 @@ function PostContent({ post }) {
         <div dangerouslySetInnerHTML={{ __html: post.selftext_html }} />
         <div className="overflow-overlay" />
       </div>
+    );
+  }
+
+  // embedded video
+  if (post.is_video && post.post_hint === "hosted:video") {
+    return (
+      <video className="post-preview-video" 
+        src={post.media.reddit_video.fallback_url} 
+        loop = {false} 
+        autoPlay = {true}
+        muted = {true}
+      />
+    );
+  }
+
+  // rich video like YouTube
+  if (post.post_hint === "rich:video") {
+    return (
+      <div dangerouslySetInnerHTML={{ __html: post.media.oembed.html }} />
     );
   }
   
