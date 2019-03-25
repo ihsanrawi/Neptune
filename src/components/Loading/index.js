@@ -1,15 +1,21 @@
 import React from 'react';
+import PropTypes from "prop-types";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Loading.scss';
 
-function Loading() {
+function Loading({type}) {
   const spinner = <FontAwesomeIcon icon="spinner"/>
 
-  return (
-    <div className="fullscreen">
-      {spinner}
-    </div>
-  )
+  switch(type){
+    case "fullscreen":
+      return <div className="fullscreen">{spinner}</div>
+    default:
+      return null;
+  }
 }
+
+Loading.propTypes = {
+  type: PropTypes.oneOf(["regular", "fullscreen", "inline"]).isRequired,
+};
 
 export default Loading;

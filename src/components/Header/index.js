@@ -8,11 +8,12 @@ function Header() {
   return (
     <header>
       <div className="header-content">
-        <Link to="/">
+        <Link to="/" className="brand">
           <div className="icon">
-            <FontAwesomeIcon icon={["fab","reddit"]}/>
+            <FontAwesomeIcon icon={["fas","bolt"]}/>
           </div>
         </Link>
+        <small className="title">Neptune</small>
       </div>
     </header>
   )

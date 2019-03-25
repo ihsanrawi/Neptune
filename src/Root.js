@@ -16,7 +16,7 @@ class Root extends Component {
     const {loading} = this.props;
 
     if(loading){
-      return <Loading />
+      return <Loading type='fullscreen'/>
     }
 
     return <App />;

@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { isImgUrl } from "../../../utils";
+import { isImgUrl } from "../../utils";
+import './PostContent.scss';
 
 function PostContent({ post }) {
   // TODO: cap text at three rows, make expandable
@@ -9,6 +10,7 @@ function PostContent({ post }) {
       <div className="post-self-text">
         <p>{post.selftext}</p>
         <div dangerouslySetInnerHTML={{ __html: post.selftext_html }} />
+        <div className="overflow-overlay" />
       </div>
     );
   }

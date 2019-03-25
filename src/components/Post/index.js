@@ -1,35 +1,48 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import moment from "moment-mini";
-import {abbrNumber} from '../../utils';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import randomColor from "randomcolor";
 
-import PostContent from './PostContent/'
+import {abbrNumber} from '../../utils';
+import PostContent from '../PostContent/';
 import './Post.scss';
 
 export default function Post({ post }) {
+  const color = randomColor({
+    seed: post.subreddit.display_name
+  });
+  
+  const user = <div className="user">u/{post.author.name}</div>
+
   return (
     <div className="post-component">
       <div className="post-score">
-        <button className="vote-button">
+        <button className="vote-button vote-up">
           <FontAwesomeIcon icon="arrow-up"/>
         </button>
         <div className="score">{abbrNumber(post.score)}</div>
-        <button className="vote-button">
+        <button className="vote-button vote-down">
           <FontAwesomeIcon icon="arrow-down"/>
         </button>
       </div>
 
       <div className="post-data">
-        <div className="post-title">{post.title}</div>
-
-        <PostContent post={post} />
-
-        <div className="post-date">
-          {moment.unix(post.created_utc).fromNow()} by {post.author.name}
+        <div className="post-sub" style={{ color: color}}>
+          <small>r/{post.subreddit.display_name}</small>
         </div>
-
-        <div className="post-sub">{post.subreddit.display_name}</div>
+          <div className="post-title">{post.title}</div>
+        <div className="content-wrapper">
+          <PostContent post={post} />
+        </div>
+        <div className="bottom-layout">
+          <div className="post-info">
+            <small>Posted by {user} - {moment.unix(post.created_utc).fromNow()}</small>
+          </div>
+          <div className="post-comment">
+            <small>{abbrNumber(post.num_comments)} Comments</small>
+          </div>
+        </div>
       </div>
     </div>
   );

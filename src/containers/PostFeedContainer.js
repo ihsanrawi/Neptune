@@ -22,7 +22,7 @@ class PostFeedContainer extends Component {
       (window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 500) &&
       this.props.posts.length
     ) {
-      this.loadMorePosts();
+      // this.loadMorePosts();
     }
   }
 
@@ -49,7 +49,7 @@ class PostFeedContainer extends Component {
     const { loading, posts } = this.props;
 
     if(loading){
-      return <Loading />
+      return <Loading type="fullscreen"/>
     }
 
     if(posts.length === 0) {

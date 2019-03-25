@@ -33,7 +33,7 @@ header {
   height: 50px;
   width: 100%;
   top: 0;
-  padding: 0 10px;
+  padding: 0 25px;
   z-index: 99;
 
   display: grid;
@@ -48,16 +48,26 @@ header {
     align-items: center;
   }
 
+  .brand {
+    display: inline-flex;
+    text-decoration: none;
+  }
+
   .icon {
-    background: #2793db;
+    background: #93e1d8;
     color: white;
     font-size: 20px;
     padding: 10px;
     border-radius: 50%;
-    // width: 30px;
-    // height: 30px;
+    width: 25px;
+    height: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .title {
+    align-self: center;
+    margin: 0 20px;
   }
 }
