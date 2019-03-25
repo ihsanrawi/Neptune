@@ -29,7 +29,7 @@ export default function Post({ post }) {
 
       <div className="post-data">
         <div className="post-sub" style={{ color: color}}>
-          <small>r/{post.subreddit.display_name}</small>
+          <small>{post.subreddit_name_prefixed}</small>
         </div>
           <div className="post-title">{post.title}</div>
         <div className="content-wrapper">
