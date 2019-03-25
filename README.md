@@ -1,3 +1,10 @@
+A personal project to learn react and redux. 
+Heavily inspired by http://saturnusapp.com/, an alternative reddit client.
+ 
+This project uses snoowrap, a reddit api wrapper.
+
+---------------------------------------------------------------------------------------------------------------------------------
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
