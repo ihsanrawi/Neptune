@@ -19,7 +19,7 @@ function PostContent({ post }) {
     return (
       <video className="post-preview-video" 
         src={post.media.reddit_video.fallback_url} 
-        loop = {false} 
+        loop = {true} 
         autoPlay = {true}
         muted = {true}
       />
