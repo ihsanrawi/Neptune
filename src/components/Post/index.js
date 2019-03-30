@@ -30,6 +30,10 @@ export default function Post({ post }) {
       <div className="post-data">
         <div className="post-sub" style={{ color: color}}>
           <small>{post.subreddit_name_prefixed}</small>
+          {/* TODO: Move flair to another div */}
+          {post.over_18 &&
+            <span className=" post-tag nsfw-tag">NSFW</span>
+          }
         </div>
           <div className="post-title">{post.title}</div>
         <div className="content-wrapper">
