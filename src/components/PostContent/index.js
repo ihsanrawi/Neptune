@@ -48,6 +48,16 @@ function PostContent({ post }) {
       />
     );
   }
+
+  //handle external content link
+  if(post.url) {
+    return (
+      <a href={post.url} >
+        <img className="post-preview-img" src={post.thumbnail} alt=""/>
+      </a>
+    )
+  }
+
   return null;
 }
 
