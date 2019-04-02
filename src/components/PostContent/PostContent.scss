@@ -29,4 +29,36 @@
       rgba(var(--content-bg-rgb), 0)
     );
   }
+
+  // 
+}
+
+.flex {
+    display: flex;
+    margin-top: 0px;
+  }
+
+.url {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 27px;
+  // line-height: 16px;
+  margin: 4px 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.icon {
+  background: #93e1d8;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  margin: 4px 0;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

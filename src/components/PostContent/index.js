@@ -1,5 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import { isImgUrl } from "../../utils";
 import './PostContent.scss';
 
@@ -49,16 +51,34 @@ function PostContent({ post }) {
     );
   }
 
+  let thumbnail;
+
   //handle external content link
-  if(post.url) {
+  if(post.post_hint === 'link') {
+    if(post.preview) {
+      thumbnail = (
+        <img
+          className="post-preview-img"
+          src={post.preview.images[0].source.url}
+          alt={post.title}
+        />
+      )
+    }
+
     return (
-      <a href={post.url} >
-        <img className="post-preview-img" src={post.thumbnail} alt=""/>
+      <a href={post.url} target="_blank" rel="noopener noreferrer">
+        <div className="flex">
+          <div className="icon">
+            <FontAwesomeIcon icon={"window-maximize"}/>
+          </div>
+          <div className="url">
+            {post.url}
+          </div>
+        </div>
+        {thumbnail}
       </a>
     )
   }
-
-  return null;
 }
 
 PostContent.propTypes = {
