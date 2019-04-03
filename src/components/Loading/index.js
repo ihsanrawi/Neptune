@@ -9,6 +9,8 @@ function Loading({type}) {
   switch(type){
     case "fullscreen":
       return <div className="fullscreen">{spinner}</div>
+      case "inline":
+      return <div className="inline">Loading more...</div>
     default:
       return null;
   }
