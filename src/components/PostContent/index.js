@@ -79,6 +79,7 @@ function PostContent({ post }) {
       </a>
     )
   }
+  return null;
 }
 
 PostContent.propTypes = {
