@@ -5,6 +5,6 @@ const browserUA = navigator.userAgent.toLocaleLowerCase();
 const clientId = process.env.REACT_APP_CLIENT_ID;
 
 export default {
-  userAgent: `${browserUA}:${pkg.name}:v${pkg.version}`,
+  userAgent: `${browserUA}:${pkg.name}:v${pkg.version}(by /u/IITYWYGMAQ)`,
   clientId: clientId
 }
