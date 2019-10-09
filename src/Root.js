@@ -1,50 +1,50 @@
 import React, { Component } from 'react';
-import { connect } from "react-redux";
-import { withRouter } from "react-router-dom";
-import PropTypes from "prop-types";
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-import { initSnoowrap } from "./actions/snoowrap";
-import Loading from './components/Loading'
+import { initSnoowrap } from './redux/actions/snoowrap';
+import Loading from './components/Loading';
 import App from './App';
 
 class Root extends Component {
-  componentDidMount = () => {
-    this.props.createSnoowrapper();
-  }
-  
-  render() {
-    const {loading} = this.props;
+	componentDidMount = () => {
+		this.props.createSnoowrapper();
+	};
 
-    if(loading){
-      return <Loading type='fullscreen'/>
-    }
+	render() {
+		const { loading } = this.props;
 
-    return <App />;
-  }
+		if (loading) {
+			return <Loading type='fullscreen' />;
+		}
+
+		return <App />;
+	}
 }
 
 Root.propTypes = {
-  loading: PropTypes.bool.isRequired,
-  createSnoowrapper: PropTypes.func.isRequired
+	loading: PropTypes.bool.isRequired,
+	createSnoowrapper: PropTypes.func.isRequired
 };
 
-const mapStateToProps = ({snoowrap}) => {
-  return {
-    loading: snoowrap.loading,
-  }
+const mapStateToProps = ({ snoowrap }) => {
+	return {
+		loading: snoowrap.loading
+	};
 };
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    createSnoowrapper: () => {
-      dispatch(initSnoowrap());
-    }
-  }
+const mapDispatchToProps = dispatch => {
+	return {
+		createSnoowrapper: () => {
+			dispatch(initSnoowrap());
+		}
+	};
 };
 
 export default withRouter(
-  connect (
-    mapStateToProps,
-    mapDispatchToProps
-  )(Root)
+	connect(
+		mapStateToProps,
+		mapDispatchToProps
+	)(Root)
 );
