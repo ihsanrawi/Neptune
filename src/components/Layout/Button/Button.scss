@@ -1,0 +1,24 @@
+button {
+	background: transparent;
+	border: none;
+	color: inherit;
+	cursor: pointer;
+	padding: initial;
+}
+
+.btn {
+	display: inline-block;
+	margin-right: 12px;
+	transition: color 0.1s;
+}
+
+.icon {
+	fill: currentColor;
+	display: inline-block;
+	font-size: 14px;
+	height: 12px;
+	line-height: 13px;
+	margin: 0 6px 0 -1px;
+	vertical-align: middle;
+	width: 12px;
+}
