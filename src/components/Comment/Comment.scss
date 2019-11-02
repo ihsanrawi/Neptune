@@ -1,3 +1,37 @@
+.comment-container {
+	margin-bottom: 20px;
+	background: white;
+	border-radius: 5px;
+	padding: 20px;
+
+	// display: flex;
+	// width: 100%;
+}
+
+.comment-header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.header-item {
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 16px;
+	padding-right: 4px;
+}
+
+.comment-content {
+	padding: 2px 0;
+	width: 100%;
+}
+
+.comment-footer {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
 .comment-component {
 	margin-bottom: 20px;
 	background: white;
@@ -6,12 +40,6 @@
 
 	display: flex;
 	width: 100%;
-}
-
-.btn {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
 }
 
 .btn-action {

@@ -11,19 +11,27 @@ import PostContent from '../PostContent/';
 import './Comment.scss';
 
 export default function Comment({ post }) {
+	console.log(post);
 	const user = <div className='user'>u/{post.author.name}</div>;
 
 	return (
-		<div className='comment-component'>
-			<div className='top-layout'></div>
-			<div></div>
-			<div className='btn btn-action'>
+		<section className='comment-container'>
+			<div className='comment-header'>
+				<div className='header-item'>Artavur</div>
+				<div className='header-item'>213 points</div>
+				<div className='header-item'>.</div>
+				<div className='header-item'>5 hours ago</div>
+			</div>
+			<div className='comment-content'>
+				<p>this is a test comment</p>
+			</div>
+			<div className='comment-footer'>
 				<Button title='Reply' />
 				<Button title='Give Award' />
 				<Button title='Share' />
 				<Button title='Save' />
 			</div>
-		</div>
+		</section>
 	);
 }
 
