@@ -1,0 +1,138 @@
+.comment-component {
+	margin-bottom: 20px;
+	background: white;
+	border-radius: 5px;
+	padding: 20px;
+
+	display: flex;
+	width: 100%;
+}
+
+.btn {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.btn-action {
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 16px;
+	color: var(--newCommunityTheme-actionIcon);
+	margin: 4px 0 8px;
+}
+
+.top-layout {
+	margin-left: 0;
+	min-height: 18px;
+
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 16px;
+	align-items: center;
+	color: var(--newCommunityTheme-bodyText);
+	display: flex;
+	transition: opacity 0.2s;
+}
+
+.post-score {
+	margin-right: 20px;
+	align-items: center;
+	display: flex;
+	fill: inherit;
+	flex-direction: column;
+
+	button {
+		background: transparent;
+		border: none;
+		color: inherit;
+		cursor: pointer;
+		padding: initial;
+	}
+
+	.vote-button {
+		height: 24px;
+		width: 24px;
+		font-size: large;
+	}
+
+	.vote-up:hover {
+		color: red;
+		opacity: 0.6;
+	}
+
+	.vote-down:hover {
+		color: blue;
+		opacity: 0.6;
+	}
+
+	.score {
+		font-size: 12px;
+		font-weight: 700;
+		line-height: 16px;
+		// color: rgb(215, 218, 220);
+		color: rgb(26, 26, 27);
+	}
+}
+
+.post-sub {
+	margin-bottom: 10px;
+	// border-radius: 25px;
+	padding: 4px 0px;
+	display: inline-block;
+}
+
+.post-title {
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.post-info {
+	opacity: 0.4;
+}
+
+.post-preview-img {
+	width: 100%;
+	max-height: 600px;
+	object-fit: contain;
+	background: #f9fafc;
+	margin-bottom: 10px;
+}
+
+.content-wrapper {
+	margin-bottom: 15px;
+
+	iframe {
+		width: 100%;
+		max-height: var(--max-content-height);
+	}
+}
+
+.bottom-layout {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.post-data {
+	width: 90%;
+
+	.nsfw-tag {
+		background-color: red;
+		color: antiquewhite;
+	}
+
+	.post-tag {
+		border-radius: 5px;
+		padding: 3px 5px;
+		margin: 0px 5px;
+	}
+}
+
+.user {
+	display: inline-block;
+	text-decoration: none;
+	padding: 2px 4px;
+	border-radius: 20px;
+	background-color: antiquewhite;
+}
