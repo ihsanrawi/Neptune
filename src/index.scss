@@ -1,47 +1,165 @@
 :root {
-  --body-bg-rgb: 239, 243, 245;
-  --body-bg: rgb(var(--body-bg-rgb));
+	--body-bg-rgb: 239, 243, 245;
+	--body-bg: rgb(var(--body-bg-rgb));
 
-  --content-bg-rgb: 255, 255, 255;
-  --content-bg: rgb(var(--content-bg-rgb));
+	--content-bg-rgb: 255, 255, 255;
+	--content-bg: rgb(var(--content-bg-rgb));
 
-  --text-color-rgb: 70, 70, 70;
-  --text-color: rgb(var(--text-color-rgb));
+	--text-color-rgb: 70, 70, 70;
+	--text-color: rgb(var(--text-color-rgb));
 
-  --max-content-height: 75vh;
-  --content-padding: 20px;
+	--max-content-height: 75vh;
+	--content-padding: 20px;
+
+	--newRedditTheme-actionIcon: #878a8c;
+	--newRedditTheme-actionIconAlpha50: rgba(135, 138, 140, 0.5);
+	--newRedditTheme-actionIconShaded80: #6c6e70;
+	--newCommunityTheme-bodyText: #1c1c1c;
+	--newCommunityTheme-bodyTextAlpha03: rgba(28, 28, 28, 0.03);
+	--newCommunityTheme-bodyTextAlpha20: rgba(28, 28, 28, 0.2);
+	--newCommunityTheme-bodyTextShaded20: #050505;
+	--newCommunityTheme-bodyTextTinted20: #d1d1d1;
+	//Taken from reddit.com
+	--actionIcon: #878a8c;
+	--actionIconAlpha50: rgba(135, 138, 140, 0.5);
+	--actionIconShaded80: #6c6e70;
+	--active: #24a0ed;
+	--activeAlpha10: rgba(36, 160, 237, 0.1);
+	--activeAlpha50: rgba(36, 160, 237, 0.5);
+	--activeLight60: #42adf0;
+	--activeTinted05: #f4fafe;
+	--banner-backgroundColor: #24a0ed;
+	--banner-backgroundImage: initial;
+	--banner-backgroundImagePosition: cover;
+	--banner-communityNameFormat: slashtag;
+	--banner-height: 64;
+	--banner-iconColor: #24a0ed;
+	--banner-iconDimensions-borderRadius: 24;
+	--banner-iconDimensions-customSize: 32;
+	--banner-iconDimensions-padding: 6;
+	--banner-iconDimensions-size: 24;
+	--banner-iconImage: initial;
+	--banner-lineHeight: 38;
+	--banner-positionedImage: initial;
+	--banner-positionedImageAlignment: cover;
+	--banner-positionedImageHeight: 48;
+	--banner-secondaryBannerPositionedImage: initial;
+	--body: #ffffff;
+	--bodyAlpha50: rgba(255, 255, 255, 0.5);
+	--bodyAlpha80: rgba(255, 255, 255, 0.8);
+	--bodyShaded80: #ccc;
+	--bodyText: #1c1c1c;
+	--bodyTextAlpha03: rgba(28, 28, 28, 0.03);
+	--bodyTextAlpha20: rgba(28, 28, 28, 0.2);
+	--bodyTextShaded20: #050505;
+	--bodyTextTinted20: #d1d1d1;
+	--bodyTinted50: #fff;
+	--bodyTinted80: #fff;
+	--button: #0079d3;
+	--buttonAlpha05: rgba(0, 121, 211, 0.05);
+	--buttonAlpha10: rgba(0, 121, 211, 0.1);
+	--buttonAlpha20: rgba(0, 121, 211, 0.2);
+	--buttonAlpha40: rgba(0, 121, 211, 0.4);
+	--buttonAlpha50: rgba(0, 121, 211, 0.5);
+	--buttonAlpha80: rgba(0, 121, 211, 0.8);
+	--buttonShaded80: #0060a8;
+	--buttonTinted20: #cce4f6;
+	--buttonTinted50: #7fbce9;
+	--buttonTinted80: #3293db;
+	--canvas: #dae0e6;
+	--errorText: #ff0000;
+	--field: #f6f7f8;
+	--flair: #edeff1;
+	--highlight: #e9f5fd;
+	--inactive: #edeff1;
+	--lightText: #ffffff;
+	--lightTextAlpha75: rgba(255, 255, 255, 0.75);
+	--line: #edeff1;
+	--linkText: #0079d3;
+	--linkTextAlpha80: rgba(0, 121, 211, 0.5);
+	--linkTextShaded80: #0060a8;
+	--linkTextTinted80: #3293db;
+	--linkTextWithBody: #3f9ade;
+	--menu: #ffffff;
+	--menuActiveText: #0079d3;
+	--menuInactiveText: #0079d3;
+	--metaText: #7c7c7c;
+	--metaTextAlpha50: rgba(120, 124, 126, 0.5);
+	--metaTextShaded80: #606364;
+	--monospaceColor: #ff006d;
+	--navBar-activeLink: #e9f5fd;
+	--navBar-activeSubmenuCaret: #24a0ed;
+	--navBar-activeSubmenuLink: #24a0ed;
+	--navBar-backgroundColor: #24a0ed;
+	--navBar-backgroundImage: initial;
+	--navBar-hoverLink: #e9f5fd;
+	--navBar-inactiveLink: #edeff1;
+	--navBar-inactiveSubmenuCaret: #42adf0;
+	--navBar-inactiveSubmenuLink: #42adf0;
+	--navBar-submenuBackgroundColor: #def1fc;
+	--navIcon: #1a1a1b;
+	--navIconFaded10: rgba(26, 26, 27, 0.1);
+	--pageHeader: #0079d3;
+	--placeholder: #d6d6d6;
+	--post: #ffffff;
+	--postFlairText: #1a1a1b;
+	--postIcon: #898989;
+	--postLine: #ccc;
+	--postTinted20: #fff;
+	--postTransparent20: rgba(255, 255, 255, 0.8);
+	--report: #fff7e5;
+	--titleText: #1a1a1b;
+	--voteIcons-downvoteActive: initial;
+	--voteIcons-downvoteInactive: initial;
+	--voteIcons-upvoteActive: initial;
+	--voteIcons-upvoteInactive: initial;
+	--voteText-base: #898989;
+	--voteText-downvote: #7193ff;
+	--voteText-downvoteShaded80: #5a75cc;
+	--voteText-downvoteTinted80: #8da8ff;
+	--voteText-upvote: #ff4500;
+	--voteText-upvoteShaded80: #cc3700;
+	--voteText-upvoteTinted80: #ff6a32;
+	--widgetColors-lineColor: rgba(26, 26, 27, 0.07);
+	--widgetColors-sidebarWidgetBackgroundColor: #ffffff;
+	--widgetColors-sidebarWidgetHeaderColor: #ffffff;
+	--widgetColors-sidebarWidgetHeaderColorAlpha60: rgba(255, 255, 255, 0.6);
+	--widgetColors-sidebarWidgetTextColor: #1a1a1b;
+	--widgetColors-sidebarWidgetTextColorShaded80: #141415;
+	--widgetColors-sidebarWidgetTitleColor: #1a1a1b;
+	--subredditContext-isCommentsPage: initial;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  background: var(--body-bg);
-  color: var(--text-color);
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	background: var(--body-bg);
+	color: var(--text-color);
 }
 
 img,
 video {
-  margin: 0;
-  padding: 0;
-  display: block;
+	margin: 0;
+	padding: 0;
+	display: block;
 }
 
 button {
-  -webkit-appearance: none; // remove default iOS styling
-  cursor: pointer;
-  border: none;
-  background: none;
-  color: inherit;
-  border-radius: 0;
-  padding: 0;
-  outline: none;
+	-webkit-appearance: none; // remove default iOS styling
+	cursor: pointer;
+	border: none;
+	background: none;
+	color: inherit;
+	border-radius: 0;
+	padding: 0;
+	outline: none;
 
-  &:active {
-    color: black;
-  }
+	&:active {
+		color: black;
+	}
 }
 
 .main-content {
-  margin-top: 70px;
+	margin-top: 70px;
 }
