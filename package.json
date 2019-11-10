@@ -1,58 +1,50 @@
 {
-  "name": "neptune",
-  "version": "0.1.0",
-  "private": true,
-  "homepage": "https://ihsanrawi.github.io/Neptune/",
-  "engines": {
-    "node": "11.12.0"
-  },
-  "dependencies": {
-    "@fortawesome/fontawesome-free": "5.7.2",
-    "@fortawesome/fontawesome-svg-core": "1.2.15",
-    "@fortawesome/free-brands-svg-icons": "5.7.2",
-    "@fortawesome/free-regular-svg-icons": "5.7.2",
-    "@fortawesome/free-solid-svg-icons": "5.7.2",
-    "@fortawesome/react-fontawesome": "0.1.4",
-    "axios": "^0.18.1",
-    "moment-mini": "^2.22.1",
-    "node-sass": "^4.11.0",
-    "prop-types": "^15.7.2",
-    "randomcolor": "0.5.4",
-    "react": "^16.8.2",
-    "react-dom": "^16.8.2",
-    "react-redux": "^6.0.1",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "^3.2.0",
-    "redux": "^4.0.0",
-    "redux-thunk": "^2.3.0",
-    "snoowrap": "^1.15.2",
-    "styled-components": "^4.1.3"
-  },
-  "devDependencies": {
-    "gh-pages": "^2.0.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "postinstall": "npm run build"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
-  "guppy": {
-    "id": "4d74e630-3e85-11e9-805e-a910a2e0b1f7",
-    "name": "neptune",
-    "type": "create-react-app",
-    "color": "#00bfb5",
-    "icon": "/static/media/icon_gradient2.5d1b28fb.png",
-    "createdAt": 1551707786261
-  }
+	"name": "neptune",
+	"version": "0.1.0",
+	"private": true,
+	"homepage": "https://ihsanrawi.github.io/Neptune/",
+	"engines": {
+		"node": "11.12.0"
+	},
+	"dependencies": {
+		"@fortawesome/fontawesome-free": "5.7.2",
+		"@fortawesome/fontawesome-svg-core": "1.2.15",
+		"@fortawesome/free-brands-svg-icons": "5.7.2",
+		"@fortawesome/free-regular-svg-icons": "5.7.2",
+		"@fortawesome/free-solid-svg-icons": "5.7.2",
+		"@fortawesome/react-fontawesome": "0.1.4",
+		"axios": "^0.18.1",
+		"moment-mini": "^2.22.1",
+		"node-sass": "^4.11.0",
+		"prop-types": "^15.7.2",
+		"randomcolor": "0.5.4",
+		"react": "^16.8.2",
+		"react-dom": "^16.8.2",
+		"react-redux": "^6.0.1",
+		"react-router-dom": "^4.3.1",
+		"react-scripts": "^3.2.0",
+		"redux": "^4.0.0",
+		"redux-thunk": "^2.3.0",
+		"snoowrap": "^1.15.2",
+		"styled-components": "^4.1.3"
+	},
+	"devDependencies": {
+		"gh-pages": "^2.0.1"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject",
+		"postinstall": "npm run build"
+	},
+	"eslintConfig": {
+		"extends": "react-app"
+	},
+	"browserslist": [
+		">0.2%",
+		"not dead",
+		"not ie <= 11",
+		"not op_mini all"
+	]
 }
