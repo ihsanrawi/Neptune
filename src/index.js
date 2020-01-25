@@ -7,12 +7,12 @@ import './fontawesome';
 import './index.scss';
 import store from './redux/store';
 import Root from './Root';
-import Test from './components/Test';
+// import Test from './components/Test';
 
 ReactDOM.render(
 	<Provider store={store}>
 		<Router>
-			<Test />
+			<Root />
 		</Router>
 	</Provider>,
 	document.getElementById('root')
