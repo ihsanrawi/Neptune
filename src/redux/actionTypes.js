@@ -1,9 +1,0 @@
-export const GET_SNOOWRAP = "GET_SNOOWRAP";
-export const RECEIVE_SNOOWRAP = "RECEIVE_SNOOWRAP";
-
-
-export const REQUEST_POSTS = "REQUEST_POSTS";
-export const REQUEST_MORE_POSTS = "REQUEST_MORE_POSTS";
-export const RECEIVE_POSTS = "RECEIVE_POSTS";
-
-
