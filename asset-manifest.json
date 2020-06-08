@@ -1,13 +1,22 @@
 {
-  "main.css": "/Neptune/static/css/main.9b27fb6d.chunk.css",
-  "main.js": "/Neptune/static/js/main.e8f01488.chunk.js",
-  "main.js.map": "/Neptune/static/js/main.e8f01488.chunk.js.map",
-  "runtime~main.js": "/Neptune/static/js/runtime~main.c68fe548.js",
-  "runtime~main.js.map": "/Neptune/static/js/runtime~main.c68fe548.js.map",
-  "static/js/2.b4270114.chunk.js": "/Neptune/static/js/2.b4270114.chunk.js",
-  "static/js/2.b4270114.chunk.js.map": "/Neptune/static/js/2.b4270114.chunk.js.map",
-  "index.html": "/Neptune/index.html",
-  "precache-manifest.6d276ba20acc127230c0890aca48c4a4.js": "/Neptune/precache-manifest.6d276ba20acc127230c0890aca48c4a4.js",
-  "service-worker.js": "/Neptune/service-worker.js",
-  "static/css/main.9b27fb6d.chunk.css.map": "/Neptune/static/css/main.9b27fb6d.chunk.css.map"
+  "files": {
+    "main.css": "/Neptune/static/css/main.736ec359.chunk.css",
+    "main.js": "/Neptune/static/js/main.f727f9e7.chunk.js",
+    "main.js.map": "/Neptune/static/js/main.f727f9e7.chunk.js.map",
+    "runtime-main.js": "/Neptune/static/js/runtime-main.5dd1b345.js",
+    "runtime-main.js.map": "/Neptune/static/js/runtime-main.5dd1b345.js.map",
+    "static/js/2.3ac278b7.chunk.js": "/Neptune/static/js/2.3ac278b7.chunk.js",
+    "static/js/2.3ac278b7.chunk.js.map": "/Neptune/static/js/2.3ac278b7.chunk.js.map",
+    "index.html": "/Neptune/index.html",
+    "precache-manifest.77612ac76bc1f77189436648e45fa86c.js": "/Neptune/precache-manifest.77612ac76bc1f77189436648e45fa86c.js",
+    "service-worker.js": "/Neptune/service-worker.js",
+    "static/css/main.736ec359.chunk.css.map": "/Neptune/static/css/main.736ec359.chunk.css.map",
+    "static/js/2.3ac278b7.chunk.js.LICENSE.txt": "/Neptune/static/js/2.3ac278b7.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5dd1b345.js",
+    "static/js/2.3ac278b7.chunk.js",
+    "static/css/main.736ec359.chunk.css",
+    "static/js/main.f727f9e7.chunk.js"
+  ]
 }
