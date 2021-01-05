@@ -13,7 +13,7 @@
 		"@fortawesome/free-regular-svg-icons": "5.7.2",
 		"@fortawesome/free-solid-svg-icons": "5.7.2",
 		"@fortawesome/react-fontawesome": "0.1.4",
-		"axios": "^0.18.1",
+		"axios": "^0.21.1",
 		"moment-mini": "^2.22.1",
 		"node-sass": "^4.11.0",
 		"prop-types": "^15.7.2",
